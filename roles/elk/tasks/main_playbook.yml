@@ -1,0 +1,7 @@
+---
+- name: Install monitoring tools
+  hosts: clients
+  tasks:
+    - name: Install elasticsearch
+      include_role:
+        name: elk

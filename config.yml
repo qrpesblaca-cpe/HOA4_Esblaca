@@ -1,0 +1,15 @@
+---
+- name: Install Monitoring Tools
+  hosts: all
+  tasks:
+    - name: Install Elasticsearch for Ubuntu and CentOS
+      include_role:
+        name: elk
+
+    - name: Install Logstash for Ubuntu and CentOS
+      include_role:
+        name: logstash
+ 
+    - name: Install Kibana for Ubuntu and CentOS
+      include_role:
+        name: kibana
